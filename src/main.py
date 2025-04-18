@@ -166,7 +166,6 @@ class SubNetworkEncoder(nn.Module):
         )
 
     def forward(self, x):
-        batch_size = x[0].shape[0]
         x = torch.stack([mlp(f) for mlp, f in zip(self.mlps, x)], dim=1)
         attn_weights_all = []
         for mhsa in self.mhsa_layers:

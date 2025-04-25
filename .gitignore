@@ -1,3 +1,5 @@
 */Outputs/*
 src/*.csv
 *.npy
+*.npz
+*.pth
